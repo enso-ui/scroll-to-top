@@ -2,16 +2,17 @@
     <core-scroll-to-top>
         <template #default="{ visible, type, controlEvents }">
             <zoom>
-                <div class="button scroll-control"
+                <button class="button scroll-control"
                     :class="[type, $attrs.class]"
+                    type="button"
                     v-on="controlEvents"
                     v-if="visible">
                     <slot>
                         <span class="icon is-large">
-                            <fa icon="arrow-alt-circle-up"/>
+                            <fa :icon="faCircleUp"/>
                         </span>
                     </slot>
-                </div>
+                </button>
             </zoom>
         </template>
     </core-scroll-to-top>
@@ -20,39 +21,59 @@
 <script>
 import { Zoom } from '@enso-ui/transitions';
 import { FontAwesomeIcon as Fa } from '@fortawesome/vue-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUp } from '@fortawesome/free-solid-svg-icons';
 import CoreScrollToTop from '../renderless/CoreScrollToTop.vue';
-
-library.add(faArrowAltCircleUp);
 
 export default {
     name: 'ScrollToTop',
 
     components: { CoreScrollToTop, Fa, Zoom },
+
+    data: () => ({
+        faCircleUp,
+    }),
 };
 </script>
 
 <style lang="scss">
-    .scroll-control {
-        z-index: 3;
+    .button.scroll-control {
+        z-index: 41;
         position: fixed;
-        bottom: 3em;
+        bottom: 2.5em;
 
         @media screen and (min-width: 769px) {
             [dir='ltr'] & {
+                left: auto;
                 right: 1.5em;
             }
             [dir='rtl'] & {
+                right: auto;
                 left: 1.5em;
             }
         }
         @media screen and (max-width: 768px) {
             [dir='ltr'] & {
+                left: auto;
                 right: 0.5em;
             }
             [dir='rtl'] & {
+                right: auto;
                 left: 0.5em;
+            }
+        }
+    }
+
+    [data-theme='light'] {
+        .button.scroll-control {
+            color: #fff;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.is-hovered,
+            &.is-focused,
+            &.is-active {
+                color: #fff;
             }
         }
     }

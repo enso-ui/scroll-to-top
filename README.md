@@ -1,4 +1,4 @@
-# Loader
+# Scroll To Top
 
 ![npm license](https://img.shields.io/npm/l/@enso-ui/scroll-to-top.svg) 
 ![npm download](https://img.shields.io/npm/dm/@enso-ui/scroll-to-top.svg) 
@@ -6,7 +6,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/enso-ui/scroll-to-top.svg) 
 ![npm version](https://img.shields.io/npm/v/@enso-ui/scroll-to-top.svg) 
 
-Simple loader
+Scroll to top control
 
 ## Usage
 The component can be used outside of the Enso ecosystem.
@@ -27,4 +27,4 @@ Thank you to all the people who already contributed to Enso!
 
 ## License
 
-[ISC](https://opensource.org/licenses/ISC)
+[MIT](https://opensource.org/licenses/MIT)
