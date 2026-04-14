@@ -8,7 +8,7 @@
                     v-on="controlEvents"
                     v-if="visible">
                     <slot>
-                        <span class="icon is-large">
+                        <span class="icon">
                             <fa :icon="faCircleUp"/>
                         </span>
                     </slot>
