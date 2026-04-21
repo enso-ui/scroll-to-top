@@ -1,4 +1,4 @@
-# Scroll To Top
+# Scroll to Top
 [![License](https://img.shields.io/badge/license-MIT-10b981.svg)](https://github.com/enso-ui/scroll-to-top/blob/master/LICENSE)
 [![Stable](https://img.shields.io/badge/stable-4.1.4-2563eb.svg)](https://www.npmjs.com/package/@enso-ui/scroll-to-top)
 [![Downloads](https://img.shields.io/npm/dm/@enso-ui/scroll-to-top.svg)](https://www.npmjs.com/package/@enso-ui/scroll-to-top)
@@ -22,7 +22,7 @@ yarn add @enso-ui/scroll-to-top
 ## Usage
 ```vue
 <script setup>
-import ScrollToTop from '@enso-ui/scroll-to-top./src/bulma/ScrollToTop.vue';
+import ScrollToTop from '@enso-ui/scroll-to-top/bulma';
 </script>
 ```
 ## API
